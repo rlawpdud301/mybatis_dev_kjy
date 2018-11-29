@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.yi.mybatis_dev_kjy.dao.studentMapper">
+	<sql id="selectSql">
+		select STUD_ID as studid,name,EMAIL,DOB,PHONE
+		from students
+	</sql>
+	<sql id="whereSql">
+		<where>
+			<if test="studId != null">
+				STUD_ID=#{studId}
+			</if>
+		</where>
+	</sql>
+	<select id="selectstudentbyno" parameterType="Student"
+		resultType="Student">
+		<include refid="selectSql"/>
+		<include refid="whereSql"/>
+		<!-- where STUD_ID=#{studId} -->
+	</select>
+	<select id="selectStudentByAll" resultType="Student">
+		<include refid="selectSql"/>
+	</select>
+	<insert id="insertStudent" parameterType="Student">
+		INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB)
+		VALUES(#{studId},#{name}, #{email}, #{phone}, #{dob})
+	</insert>
+	
+	<update id="updateStudent" parameterType="Student">
+		UPDATE mybatis_dev.students
+		SET NAME=#{name}, EMAIL=#{email}, PHONE=#{phone}, DOB=#{dob}
+		<!-- WHERE STUD_ID=#{studId}; --> 
+		<include refid="whereSql"/>
+	</update>
+	<delete id="deleteStudent">
+		DELETE FROM mybatis_dev.students
+		WHERE STUD_ID = #{studId}
+		
+	</delete>
+	
+	
+	
+	
+</mapper>
