@@ -569,3 +569,36 @@
 [2018-11-29] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
 [2018-11-29] ==> Parameters: 4(Integer)
 [2018-11-29] <==    Updates: 1
+[2018-11-29] testOpenSession()
+[2018-11-29] test01selectstudentbyno
+[2018-11-29] test02selectStudentByAll
+[2018-11-29] test03insertStudent
+[2018-11-29] test03updateStudent
+[2018-11-29] test03deleteStudent
+[2018-11-29] testOpenSession()
+[2018-11-29] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@1d699549
+[2018-11-29] test01selectstudentbyno
+[2018-11-29] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-29] ==> Parameters: 1(Integer)
+[2018-11-29] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-29] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-29, 010-9986-5500
+[2018-11-29] <==      Total: 1
+[2018-11-29] test02selectStudentByAll
+[2018-11-29] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-29] ==> Parameters: 
+[2018-11-29] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-29] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-29, 010-9986-5500
+[2018-11-29] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-29] <==      Total: 2
+[2018-11-29] test03insertStudent
+[2018-11-29] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-29] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 18:03:25.807(Timestamp)
+[2018-11-29] <==    Updates: 1
+[2018-11-29] test03updateStudent
+[2018-11-29] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-29] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-29 18:03:25.815(Timestamp), 1(Integer)
+[2018-11-29] <==    Updates: 1
+[2018-11-29] test03deleteStudent
+[2018-11-29] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-29] ==> Parameters: 4(Integer)
+[2018-11-29] <==    Updates: 1
