@@ -37,8 +37,53 @@
 		WHERE STUD_ID = #{studId}
 		
 	</delete>
+	<resultMap type="Student" id="StudentResult">
+		<id property="studId" column="stud_id"/>
+		<result property="name" column="name"/>
+		<result property="email" column="email"/>
+		<result property="phone" column="phone"/>
+		<result property="dob" column="dob"/>		
+	</resultMap>
+	<select id="selectStudentByAllForResutlMap" resultType="map">
+		<include refid="selectSql"/>
+	</select>
+	<resultMap type="Student" id="StudentWithAddressResult" extends="StudentResult">
+		<result property="address.addrId" column="addr_id"/>
+		<result property="address.street" column="street"/>
+		<result property="address.city" column="city"/>
+		<result property="address.state" column="state"/>
+		<result property="address.zip" column="zip"/>
+		<result property="address.country" column="country"/>
+		
+	</resultMap>
+	<sql id="selectJoinAddressSql">
+		select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY
+		from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID
+	</sql>
 	
+	<select id="selectStudentByNoForResultMapExtents" parameterType="Student" resultMap="StudentWithAddressResult">
+		<include refid="selectJoinAddressSql"/>
+		<include refid="whereSql"/>
+		<!-- WHERE STUD_ID = #{studId} -->
+	</select>
+	<resultMap type="Student" id="StudentWithAddressResult2">
+		<id property="studId" column="stud_id"/>
+		<result property="name" column="name"/>
+		<result property="email" column="email"/>
+		<result property="phone" column="phone"/>
+		<result property="dob" column="dob"/>
+		<result property="address.addrId" column="addr_id"/>
+		<result property="address.street" column="street"/>
+		<result property="address.city" column="city"/>
+		<result property="address.state" column="state"/>
+		<result property="address.zip" column="zip"/>
+		<result property="address.country" column="country"/>
+		
+	</resultMap>
 	
-	
-	
+	<select id="selectStudentByNoForResultMapExtents2" resultMap="StudentWithAddressResult2">
+		select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY
+		from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID
+		WHERE STUD_ID = #{studId}
+	</select>
 </mapper>

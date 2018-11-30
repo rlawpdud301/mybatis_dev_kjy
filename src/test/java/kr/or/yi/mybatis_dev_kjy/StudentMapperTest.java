@@ -4,6 +4,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Map;
+
+import javax.swing.JOptionPane;
 
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
@@ -62,6 +65,35 @@ public class StudentMapperTest extends AbstractTest {
 		log.debug("test03deleteStudent");		
 		int res = dao.deleteStudent(4);
 		Assert.assertEquals(1, res);
+		
+	}
+	@Test
+	public void test06selectStudentByAllForResutlMap() {
+		log.debug("selectStudentByAllForResutlMap");		
+		List<Map<String, Object>> list = dao.selectStudentByAllForResutlMap();
+		for(Map<String, Object> map : list) {
+			for(String key : map.keySet()) {
+				log.debug("key ="+key+ " value = " + map.get(key));
+				
+			}
+		}
+		Assert.assertNotNull(list);
+		
+	}
+	@Test
+	public void test07selectStudentByNoForResultMapExtents() {
+		log.debug("selectStudentByNoForResultMapExtents");
+		Student student = new Student();
+		student.setStudId(1);
+		Student res = dao.selectStudentByNoForResultMapExtents(student);
+		Assert.assertNotNull(res);
+		
+	}
+	@Test
+	public void test08selectStudentByNoForResultMapExtents2() {
+		log.debug("selectStudentByNoForResultMapExtents2");		
+		Student res = dao.selectStudentByNoForResultMapExtents2(1);
+		Assert.assertNotNull(res);
 		
 	}
 
