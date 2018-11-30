@@ -602,3 +602,415 @@
 [2018-11-29] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
 [2018-11-29] ==> Parameters: 4(Integer)
 [2018-11-29] <==    Updates: 1
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@720fb827
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-29, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-29, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-29, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 14:28:43.578(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 14:28:43.587(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@720fb827
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 14:42:50.05(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 14:42:50.074(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@720fb827
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 14:44:25.17(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 14:44:25.178(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@67a4cc33
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 15:51:54.658(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 15:51:54.668(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] selectStudentByNoForResultMapExtents
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID; WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@4a320419
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 15:56:31.596(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 15:56:31.607(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] selectStudentByNoForResultMapExtents
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: STUD_ID, NAME, EMAIL, PHONE, ADDR_ID, STREET, CITY, STATE, ZIP, COUNTRY
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 010-9986-5500, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@4a320419
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 15:58:16.095(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 15:58:16.105(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] selectStudentByNoForResultMapExtents
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: STUD_ID, NAME, EMAIL, PHONE, ADDR_ID, STREET, CITY, STATE, ZIP, COUNTRY
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 010-9986-5500, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@67a4cc33
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 16:06:55.367(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 16:06:55.377(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] selectStudentByNoForResultMapExtents
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: STUD_ID, NAME, EMAIL, PHONE, ADDR_ID, STREET, CITY, STATE, ZIP, COUNTRY
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 010-9986-5500, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@67a4cc33
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 16:14:03.82(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 16:14:03.827(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] selectStudentByNoForResultMapExtents
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: STUD_ID, NAME, EMAIL, PHONE, ADDR_ID, STREET, CITY, STATE, ZIP, COUNTRY
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 010-9986-5500, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[2018-11-30] <==      Total: 1
+[2018-11-30] testOpenSession()
+[2018-11-30] sessionorg.apache.ibatis.session.defaults.DefaultSqlSession@67a4cc33
+[2018-11-30] test01selectstudentbyno
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==      Total: 1
+[2018-11-30] test02selectStudentByAll
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] test03insertStudent
+[2018-11-30] ==>  Preparing: INSERT INTO mybatis_dev.students (STUD_ID,NAME, EMAIL, PHONE, DOB) VALUES(?,?, ?, ?, ?) 
+[2018-11-30] ==> Parameters: 4(Integer), ±èÀç¿µ2(String), rlawpdud303@naver.com(String), 010-9999-5555(String), 1990-03-28 16:22:05.825(Timestamp)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03updateStudent
+[2018-11-30] ==>  Preparing: UPDATE mybatis_dev.students SET NAME=?, EMAIL=?, PHONE=?, DOB=? WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: ±èÀç¿µ(String), rlawpdud301@naver.com(String), 010-9986-5500(String), 2018-11-30 16:22:05.832(Timestamp), 1(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] test03deleteStudent
+[2018-11-30] ==>  Preparing: DELETE FROM mybatis_dev.students WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 4(Integer)
+[2018-11-30] <==    Updates: 1
+[2018-11-30] selectStudentByAllForResutlMap
+[2018-11-30] ==>  Preparing: select STUD_ID as studid,name,EMAIL,DOB,PHONE from students 
+[2018-11-30] ==> Parameters: 
+[2018-11-30] <==    Columns: studid, name, EMAIL, DOB, PHONE
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 2018-11-30, 010-9986-5500
+[2018-11-30] <==        Row: 2, Douglas, douglas@gmail.com, 1990-08-15, 789-456-1234
+[2018-11-30] <==      Total: 2
+[2018-11-30] key =DOB value = 2018-11-30
+[2018-11-30] key =PHONE value = 010-9986-5500
+[2018-11-30] key =name value = ±èÀç¿µ
+[2018-11-30] key =EMAIL value = rlawpdud301@naver.com
+[2018-11-30] key =studid value = 1
+[2018-11-30] key =DOB value = 1990-08-15
+[2018-11-30] key =PHONE value = 789-456-1234
+[2018-11-30] key =name value = Douglas
+[2018-11-30] key =EMAIL value = douglas@gmail.com
+[2018-11-30] key =studid value = 2
+[2018-11-30] selectStudentByNoForResultMapExtents
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID WHERE STUD_ID=? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: STUD_ID, NAME, EMAIL, PHONE, ADDR_ID, STREET, CITY, STATE, ZIP, COUNTRY
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 010-9986-5500, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[2018-11-30] <==      Total: 1
+[2018-11-30] selectStudentByNoForResultMapExtents2
+[2018-11-30] ==>  Preparing: select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID WHERE STUD_ID = ? 
+[2018-11-30] ==> Parameters: 1(Integer)
+[2018-11-30] <==    Columns: STUD_ID, NAME, EMAIL, PHONE, ADDR_ID, STREET, CITY, STATE, ZIP, COUNTRY
+[2018-11-30] <==        Row: 1, ±èÀç¿µ, rlawpdud301@naver.com, 010-9986-5500, 3, 710 N Cable Rd, Lima, OH, 45825, Allen
+[2018-11-30] <==      Total: 1
