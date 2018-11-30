@@ -8,6 +8,42 @@ public class Student {
 	private String email;
 	private PhoneNumber phone;
 	private Date dob;
+	
+	
+	public Student(String name, String email, PhoneNumber phone, Date dob) {
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.dob = dob;
+	}
+	
+	public Student(int studId, String name, String email, PhoneNumber phone, Date dob) {
+		this.studId = studId;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.dob = dob;
+	}
+
+	public Student(String name, String email, Date dob, PhoneNumber phone) {
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.dob = dob;
+	}
+
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(int studId, String name, String email, Date dob, PhoneNumber phone) {
+		this.studId = studId;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.dob = dob;
+	}
+
 	public int getStudId() {
 		return studId;
 	}
