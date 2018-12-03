@@ -96,5 +96,12 @@ public class StudentMapperTest extends AbstractTest {
 		Assert.assertNotNull(res);
 		
 	}
+	/*@Test
+	public void test09selectStudentByNoForResultMapExtents2() {
+		log.debug("selectStudentByNoForResultMapExtents2");		
+		Student res = dao.selectStudentByNoAssociation(student);
+		Assert.assertNotNull(res);
+		
+	}*/
 
 }

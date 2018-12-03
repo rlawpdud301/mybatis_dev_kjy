@@ -15,4 +15,5 @@ public interface studentMapper {
 	List<Student> selectStudentByAllForRselt();
 	Student selectStudentByNoForResultMapExtents(Student student);
 	Student selectStudentByNoForResultMapExtents2(int studId);
+	Student selectStudentByNoAssociation(Student student);
 }

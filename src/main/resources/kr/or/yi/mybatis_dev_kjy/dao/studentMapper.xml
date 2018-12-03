@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.or.yi.mybatis_dev_kjy.dao.studentMapper">
+<resultMap type="Student" id="StudentAssociation" extends="StudentResult">
+	<association property="address" resultMap="kr.or.yi.mybatis_dev_kjy.dao.AdressMapper.AddressResult"></association>
+</resultMap>
 	<sql id="selectSql">
 		select STUD_ID as studid,name,EMAIL,DOB,PHONE
 		from students
@@ -86,4 +89,17 @@
 		from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID
 		WHERE STUD_ID = #{studId}
 	</select>
+	
+	<sql id="selectJoinAddressSql">
+		select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,STREET,CITY,STATE,ZIP,COUNTRY
+		from students s join addresses a on s.ADDR_ID=a.ADDR_ID
+	</sql>
+	
+	<select id="selectStudentByNoAssociation" parameterType="Student" resultMap="StudentAssociation">
+		<include refid="selectJoinAddressSql"/>
+		where stud_id=#{studId}
+	</select>
+	
+	
+	
 </mapper>

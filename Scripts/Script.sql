@@ -20,3 +20,6 @@ from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID;
 
 select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY
 		from students s left outer join addresses a on s.ADDR_ID=a.ADDR_ID;
+		
+select STUD_ID,NAME,EMAIL,PHONE,a.ADDR_ID,a.STREET,a.CITY,a.STATE,a.ZIP,a.COUNTRY
+from students s join addresses a on s.ADDR_ID=a.ADDR_ID;
