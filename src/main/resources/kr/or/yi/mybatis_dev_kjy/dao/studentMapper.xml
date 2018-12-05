@@ -100,6 +100,26 @@
 		where stud_id=#{studId}
 	</select>
 	
+	<sql id="insertEnumSql">
+		insert into students(stud_id,name,email,phone,DOB,gender)
+		values(#{studId},#{name},#{email},#{phone},#{dob},#{gender})
+	</sql>
+	
+	
+	<insert id="insertEnumStudent" parameterType="Student" useGeneratedKeys="true" keyProperty="studId">
+		<include refid="insertEnumSql"/>
+	</insert>
+	
+	<resultMap type="Student" id="StudentResultGender" extends="StudentResult">
+		<result property="gender" column="gender"/>
+	</resultMap>
+	
+	<select id="selectStudentWithGender" resultMap="StudentResultGender">
+		select STUD_ID as stidId,NAME,EMAIL,DOB,PHONE,gender from students
+	</select>
+	
+	
+	
 	
 	
 </mapper>

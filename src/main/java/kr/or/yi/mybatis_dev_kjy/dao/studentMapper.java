@@ -16,4 +16,9 @@ public interface studentMapper {
 	Student selectStudentByNoForResultMapExtents(Student student);
 	Student selectStudentByNoForResultMapExtents2(int studId);
 	Student selectStudentByNoAssociation(Student student);
+	
+	//enum 타입배우기
+	int insertEnumStudent(Student student);
+	List<Student> selectStudentWithGender();
+	
 }

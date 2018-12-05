@@ -15,6 +15,7 @@ import org.junit.runners.MethodSorters;
 
 import kr.or.yi.mybatis_dev_kjy.dao.studentMapper;
 import kr.or.yi.mybatis_dev_kjy.dao.studentMapperImpl;
+import kr.or.yi.mybatis_dev_kjy.dto.Gender;
 import kr.or.yi.mybatis_dev_kjy.dto.PhoneNumber;
 import kr.or.yi.mybatis_dev_kjy.dto.Student;
 
@@ -105,5 +106,26 @@ public class StudentMapperTest extends AbstractTest {
 		Assert.assertNotNull(res);
 		
 	}
+	
+	@Test
+	public void test10insertEnumStusent() {
+		log.debug("test10insertEnumStusent");
+		Calendar newDate = GregorianCalendar.getInstance();
+		newDate.set(1990,2,28);
+		Student Std = new Student("김재순","rlawpdud303@naver.com",new PhoneNumber("010-9999-5555"),newDate.getTime());	
+		Std.setGender(Gender.MALE);
+		int res = dao.insertEnumStudent(Std);
+		Assert.assertEquals(1, res);
+		
+		
+	}
+	
+	@Test
+	public void test11selectStudentWithGender() {
+		log.debug("test11selectStudentWithGender");
+		List<Student> stdList = dao.selectStudentWithGender();
+		Assert.assertNotNull(stdList);
+	}
+	
 
 }
